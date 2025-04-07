@@ -6,13 +6,14 @@ Configure database to store stuff - Viha DONE
 Deploy to Netlify and synology(docker) - Viha
 Configure Docker - Viha/Karan
 Get stock price of related tickers for past 2 years stored for daily frequency from [polygon](https://polygon.io/pricing) - Viha
-    create a price table in neon
-    create a watchlist table in neon
-    use n8n to call an endpoint in the app / historic_prices
-    find out netflify limits
-    figure out how polygon api works and create an algo
+    Create a price table in neon
+    Create a watchlist table in neon DONE
+    Use n8n to call an endpoint in the app / historic_prices
+    Find out Netlify limits
+    Figure out how polygon api works and create an algo
 Neon DB backup script/automation - Karan
 Create arch diagram - Viha
+Make NavBar common to all pages - Viha DONE
 Create the watchlist ui (crud)
 Later backfill stock prices if needed from a different API
 Later add admin password feature
@@ -61,3 +62,6 @@ Spread -> (BUY CALL, SELL CALL) OR (BUY PUT, SELL PUT) at the exact same time. S
 
 ## Open Questions
 1. Can we get historical transactions from Fidelity?
+
+## Tech Stack
+Neon DB, React, Next.js, Tailwind, Netlify, Docker

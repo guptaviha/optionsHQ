@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import { PWAWrapper } from "@/components/pwa-wrapper";
 import Script from "next/script";
+import { NavBar } from "@/components/nav-bar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,7 +23,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en">
-            <Script async src="https://analysticsk.karanrajpal.net/script.js" data-website-id="36e23ca2-95a7-49fe-986a-5fbce6bc4b76"></Script>
+            <Script async src="https://analystics.karanrajpal.net/script.js" data-website-id="36e23ca2-95a7-49fe-986a-5fbce6bc4b76"></Script>
             <body className={inter.className}>
                 <PWAWrapper>
                     <ThemeProvider
@@ -31,6 +32,8 @@ export default function RootLayout({
                         enableSystem
                         disableTransitionOnChange
                     >
+                        <NavBar />
+                        {/* children = root page.tsx */}
                         {children}
                     </ThemeProvider>
                 </PWAWrapper>

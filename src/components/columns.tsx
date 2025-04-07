@@ -1,8 +1,10 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table"
+import { ArrowUpDown } from "lucide-react"
+import { Button } from "@/components/ui/button";
 
-export type Payment = {
+export type Options = {
   id: number
   symbol: Text
   ticker: Text
@@ -18,7 +20,7 @@ export type Payment = {
   account_name: string
 }
 
-export const columns: ColumnDef<Payment>[] = [
+export const columns: ColumnDef<Options>[] = [
   {
     accessorKey: "id",
     header: "Id",
@@ -29,7 +31,17 @@ export const columns: ColumnDef<Payment>[] = [
   },
   {
     accessorKey: "ticker",
-    header: "Ticker",
+    header: ({ column }) => {
+      return (
+        <Button
+          variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
+        >
+          Email
+          <ArrowUpDown className="ml-2 h-4 w-4" />
+        </Button>
+      )
+    },
   },
   {
     accessorKey: "expiration_date",
